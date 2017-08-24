@@ -2,25 +2,21 @@
 <html>
 <head>
 <title>Guide to html</title>
+     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-color:#e6ccff;">
+<body style="background-color:#ccffcc;">
 
-<h1>Basicos</h1>
+<h1>Básicos</h1>
 
-<p>Todos los comandos se ven así: "< _ >". El comando para finalizar es "< / _ >"<br>
-1. Se define tipo de documento con !DOCTYPE html<br>
-2. Backstage del documento: todo lo que define al doc (el nombre de la pagina web, por ejemplo) que no aparece en la página. Todo documento comienza con html, head, title, Nombre a aparecer en pestaña, /title, /head. Todo lo que esta entre los tags de head es la metadata del documento.<br>
+<p>Todos los tags comienzan así: "< _ >". El tag para finalizar es "< / _ >". <br>La estructura se ve así: < tag> Contenido < /tag > <small>(sin espacios)</small>.<br></p>
+<p>Cada uno de estos es un elemento: html, body, h,p. Elementos sin contenido se llaman elementos vacíos y no requieren tag de cirre. < br > es un elemento vacío que genera otro renglón.</p>
+<p>Ejemplo de < br >:
+</p>
+<p>Esta es una línea. <br> Esta es otra.</p><p>1. Se define tipo de documento con !DOCTYPE html<br> 
+2. "Backstage" del documento: todo lo que define al doc (el nombre de la pagina web, por ejemplo) que no aparece en la página. Todo lo que está entre los tags de head es la <big><ins>metadata</ins></big> del documento.<br>
 3. Comienza el body del documento.<br>
 
-<p>Cada uno de estos es un elemento: html, body, h,p.</p>
-<p>HTML elements with no content are called empty elements.
 
-< br > is an empty element without a closing tag (the < br > tag defines a line break).
-
-Empty elements can be "closed" in the opening tag like this: < br />.
-Ejemplo de < br >:
-</p>
-<p>Esta es una linea. <br> Esta es otra.</p>
 
 	<h4>Estructura:</h4>
 
@@ -38,11 +34,12 @@ Ejemplo de < br >:
 
 	<h4>Tags:</h4>
 
-<p>< h1 > < /h1 > titulo - hasta h6 <br>
+<p>< h1 > < /h1 > título - hasta h6 <br>
 < p > < /p > párrafo <br>
-< br > siguiente renglon (empty element-sin comando de cierre)<br>
-< hr > crea una linea divisoria (empty element)<br>
-< pre >< /pre > conserva el formato que se de en el editor de textos sin requerir p o br. La fuente dentro del pre es diferente a la predeterminada de p o h. Introducir h o p dentro de pre ignora el formato predeterminado. </p>
+< br > siguiente renglón (empty element-sin comando de cierre)<br>
+< hr > crea una línea divisoria (empty element)<br>
+< pre >< /pre > conserva el formato que se dé en el editor de textos sin requerir p o br. La fuente dentro del pre es diferente a la predeterminada de p o h. Introducir h o p dentro de pre ignora el formato predeterminado. <br>
+< !-- comentario --> Hacer comentarios en el código tal que no aparezcan en la página.</p>
 <hr>
 
 <h1>Atributos</h1>
@@ -51,31 +48,65 @@ Ejemplo de < br >:
 Proveen informacion adicional para la página <br> 
 name="value".</p>
 
-	<h5>Lang</h5>
+	<h4><ins>Lang</ins></h4>
 
-<p> Declara el idioma para bases de busqueda. Se define al inicio del documento, en html. <br> 
+<p> Declara el idioma para bases de búsqueda. Se define al inicio del documento, en html. <br> 
 < html lang="en-US"></p>
 	
-	<h5>Title</h5>
+	<h4><ins>Title</ins></h4>
 
 <p title="blah">Información adicional al texto. Se define en p.<br> 
 title="blah"<br>
 Se recomienda siempre utilizar doble comilla para el valor del atributo; se pueden combinar comillas sencillas para titulos: title="Juan 'El salvador' Prz."</p>
 
-	<h5>href</h5>
+	<h4><ins>href</ins></h4>
 
 <p>Para generar ligas. En el tag < a >. El link va entre comillas, seguido del texto a ligar. <br>
- < a href="liga"> Nombre < /a > <br>
- <a href="https://www.w3schools.com/html/html_attributes.asp"> Link a atributos</a> </p>
+ < a href="liga"> Texto para la liga < /a > <br><a href="https://www.w3schools.com/html/html_attributes.asp"> Link a atributos</a>
+ <pre>
+ 	Por default, una liga se verá subrallado y de los siguientes colores:
+ 		Azul: sin visitar
+ 		Morada: visitada
+ 		Roja: activa </pre>
 
-	<h5>Img</h5>
+<p style="font-family:arial"><small> 	Para personalizar los colores, se utiliza ujn style en el head del documento:
+ 		< style><br>
+a:link {<br>
+    color: green;<br> 
+    background-color: transparent;<br> 
+    text-decoration: none;<br>
+}<br><br>
+
+a:visited {<br>
+    color: pink;<br>
+    background-color: transparent;<br>
+    text-decoration: none;<br>
+}<br><br>
+
+a:hover {<br>
+    color: red;<br>
+    background-color: transparent;<br>
+    text-decoration: underline;<br>
+}<br><br>
+
+a:active {<br>
+    color: yellow;<br>
+    background-color: transparent;<br>
+    text-decoration: underline;<br>
+}<br><br>
+< /style></small></p>
+
+
+</pre>
+
+	<h4><ins>Img</ins></h4>
 
 <p>Nombre del archivo y tamaño: <br> < img src="wabi.png" width="104" height="142"> <br>
 <img src="wabi.png" width="142" height="142"></p>
 
-	<h5>Alt</h5>
+	<h4><ins>Alt</ins></h4>
 
-<p>Provee informacion textual alternativa a la imagen para lector de textos<br>
+<p>Provee información textual alternativa a la imagen para lector de textos<br>
 < img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"></p>
 
 <p><img src="atri.png" width="800" height="300"></p>
@@ -86,7 +117,8 @@ Se recomienda siempre utilizar doble comilla para el valor del atributo; se pued
 <pre>< tagname style="property:value;">
 	Color: 
 		Fondo del documento: < body style="background-color:powderblue;">. 
-		Titulos:             < h1 style="color:blue;">heading</ h1> 
+		Fondo de un texto:   < p style="background-color:green"> < /p>
+		Títulos:             < h1 style="color:blue;">heading</ h1> 
 		Parrafos:            < p style="color:red;">paragraph.< /p> 
 			
 	Fuente:
@@ -95,15 +127,15 @@ Se recomienda siempre utilizar doble comilla para el valor del atributo; se pued
 	Tamaño:
 		< h1 style="font-size:300%;">This is a heading< /h1 >
 		< p style="font-size:160%;">This is a paragraph.< /p >
-	Alineacion:
+	Alineación:
 		< h1 style="text-align:center;">Centered Heading< /h1 >
 		< p style="text-align:left;">Lefted paragraph.< /p >
 </pre>
-<h4 style="color:blue;font-family:verdana;font-size:300%;text-align:center;">heading</h4>
+<h4 style="background-color:green;color:blue;font-family:verdana;font-size:300%;text-align:center;">heading</h4>
 <p style="color:red;font-family:courier;font-size:160%;text-align:right;">paragraph</p>
 <hr>
 <h1>Formato</h1>
-<pre> Se utilizan tags de formato para resaltar el texto visual y semanticamente. Requieren tag de cierre < /_ >.
+<pre> Se utilizan tags de formato para resaltar el texto visual y semánticamente. Requieren tag de cierre < /_ >.
 	Visual: para el lector
 		< b ><b> - Bold text</b> < /b >
 		< i ><i> - Italic text</i>
@@ -118,6 +150,20 @@ Se recomienda siempre utilizar doble comilla para el valor del atributo; se pued
 		< em ><em> - Emphasized text</em></pre>
 <hr>
 
-<h1></h1>
+<h1>Referencias</h1>
+	<p><ins>Citar un texto largo:</ins><br> 
+			<	blockquote cite="http://www.blah.blu">Texto.< /blockquote>:
+			<blockquote>Este es un ejemplo de una cita larga. Aparece indentada. El sitio indicado entre los tags no aparece en la página, al menos que alguien decida inspeccionar el código.</blockquote></p>
+	<p><ins>Citas cortas:</ins><br>
+			Para utilizar comillas, se utiliza el tag < q > < /q >: <q>Aunque es más fácil ponerlas en el documento, esto asegura que no se pierdan por un lector</q></p>
+	<p><ins>Abreviatura:</ins><br>
+			Similar al atributo title, proporciona información adicional para una abreviatura:<br>< abbr title="World Health Organization">WHO< /abbr >: <abbr title="World Health Organization">WHO</abbr></p>
+	<p><ins>Dirección:</ins><br>< address>< /address>: <address>Información de contacto. Queda en itálicas.</address> </p>
+	<p><ins>Citar título de un texto:</ins><br> 
+		< cite > < /cite >: Citamos <cite>El Resplandor</cite> y queda con formato.</p>
+	<p><ins>Dirección del texto:</ins><br> 
+		Bi-directional override. Indica la dirección del texto:<br> < bdo dir="rtl"> Texto de derecha a izquierda < /bdo ><br><bdo dir="rtl"> Texto de derecha a izquierda </bdo ></p>
+
+
 </body>
 </html>
