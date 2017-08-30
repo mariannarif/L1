@@ -39,7 +39,8 @@
 < br > siguiente renglón (empty element-sin comando de cierre)<br>
 < hr > crea una línea divisoria (empty element)<br>
 < pre >< /pre > conserva el formato que se dé en el editor de textos sin requerir p o br. La fuente dentro del pre es diferente a la predeterminada de p o h. Introducir h o p dentro de pre ignora el formato predeterminado. <br>
-< !-- comentario --> Hacer comentarios en el código tal que no aparezcan en la página.</p>
+< !-- comentario --> Hacer comentarios en el código tal que no aparezcan en la página.<br>
+< a > < /a > Hipervínculo </p>
 <hr>
 
 <h1>Atributos</h1>
@@ -63,46 +64,66 @@ Se recomienda siempre utilizar doble comilla para el valor del atributo; se pued
 
 <p>Para generar ligas. En el tag < a >. El link va entre comillas, seguido del texto a ligar. <br>
  < a href="liga"> Texto para la liga < /a > <br><a href="https://www.w3schools.com/html/html_attributes.asp"> Link a atributos</a>
- <pre>
- 	Por default, una liga se verá subrallado y de los siguientes colores:
- 		Azul: sin visitar
- 		Morada: visitada
- 		Roja: activa </pre>
+<p>
+ 	Por default, una liga se verá subrallado y de los siguientes colores:<br>
+ 		Azul: sin visitar<br>
+ 		Morada: visitada<br>
+ 		Roja: activa </p>
 
-<p style="font-family:arial"><small> 	Para personalizar los colores, se utiliza ujn style en el head del documento:
- 		< style><br>
-a:link {<br>
-    color: green;<br> 
-    background-color: transparent;<br> 
-    text-decoration: none;<br>
-}<br><br>
-
-a:visited {<br>
-    color: pink;<br>
-    background-color: transparent;<br>
-    text-decoration: none;<br>
-}<br><br>
-
-a:hover {<br>
-    color: red;<br>
-    background-color: transparent;<br>
-    text-decoration: underline;<br>
-}<br><br>
-
-a:active {<br>
-    color: yellow;<br>
-    background-color: transparent;<br>
-    text-decoration: underline;<br>
-}<br><br>
-< /style></small></p>
+<pre>Para personalizar los colores, se utiliza ujn style en el head del documento:
+ 		< style>
+a:link {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+	}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+	}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+	}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+	}
+< /style></pre>
 
 
 </pre>
+<p>TARGET</p>
+<p>blank - Opens the linked document in a new window or tab<br>
+self - Opens the linked document in the same window/tab as it was clicked (this is default)<br>
+parent - Opens the linked document in the parent frame<br>
+top - Opens the linked document in the full body of the window<br>
+framename - Opens the linked document in a named frame</p>
+
+<p>Imagen como link</p>
+<p>< a href="default.asp">
+  < img src="imagen.jpg/png/gif" alt="lectura de imagen" style="width:42px;height:42px;border:0">
+< /a></p>
+	<p><a href="https://www.w3schools.com/html/html_attributes.asp">
+  <img src="happy.png" alt="HTML tutorial" style="width:42px;height:42px;border:0">
+</a>
+</p>
+<p>Link a capítulos</p>
+<p>< a href="#C4">Ir a referencias < /a></p>
+
+< h2 id="C4">Referencias< /h2>
+<a href="#C4">Ir a Referencias</a>
 
 	<h4><ins>Img</ins></h4>
 
 <p>Nombre del archivo y tamaño: <br> < img src="wabi.png" width="104" height="142"> <br>
 <img src="wabi.png" width="142" height="142"></p>
+<p>Las medidas están en pixeles por default, pero también se puede especificar el tamaño con style:<br>
+< img src="wabi.png" alt="texto" style="width:104px;height:142px</p>
+<p>Las imágenes pueden estar en el mismo folder y servidor, y también se puede referenciar a otro folder/servidor con la liga y el path correspondiente.</p>
 
 	<h4><ins>Alt</ins></h4>
 
@@ -150,7 +171,7 @@ a:active {<br>
 		< em ><em> - Emphasized text</em></pre>
 <hr>
 
-<h1>Referencias</h1>
+<h1 id=C4>Referencias</h1>
 	<p><ins>Citar un texto largo:</ins><br> 
 			<	blockquote cite="http://www.blah.blu">Texto.< /blockquote>:
 			<blockquote>Este es un ejemplo de una cita larga. Aparece indentada. El sitio indicado entre los tags no aparece en la página, al menos que alguien decida inspeccionar el código.</blockquote></p>
@@ -163,7 +184,106 @@ a:active {<br>
 		< cite > < /cite >: Citamos <cite>El Resplandor</cite> y queda con formato.</p>
 	<p><ins>Dirección del texto:</ins><br> 
 		Bi-directional override. Indica la dirección del texto:<br> < bdo dir="rtl"> Texto de derecha a izquierda < /bdo ><br><bdo dir="rtl"> Texto de derecha a izquierda </bdo ></p>
+<h1>Tablas</h1>
+<pre>
+	< table style="width:100%" id="idt">
+	< caption > Título de tabla < /caption >
+		< tr > Fila
+			< th > Título de fila. En negritas y centrado por default.< /th >
+			< th colspan="2"> Una fila, dos columnas< /th >
+		< /tr > Cerrar fila
+		< tr > Siguiente fila
+			< td rowspan="2"> contenido de columna: ocupa una columna, dos filas< /td >
+			< td > contenido de siguiente columna
+		< /tr >
+	< /table >
+</pre>
+<table style="width: 40%">
+	<caption>Nombre y datos</caption>
+	<tr>
+		<th>Nombre</th>
+		<th>Apellido</th>
+		<th>Edad</th>
+		<th colspan="2">Contacto</th>
+	</tr>
+	<tr>
+		<td>Mariana</td>
+		<td>Rivera</td>
+		<td>22</td>
+		<td>55678392</td>
+		<td>marianarivera@server.com</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Eduardo</td>
+		<td rowspan="2">Frutos</td>
+		<td rowspan="2">22</td>
+		<td rowspan="2">55667832</td>
+		<td>eduardo@server.com</td>
+	</tr>
+	<tr>
+		<td>frutos@server.com</td>
+	</tr>
+</table>
+<p>Los bordes se definen dentro de head, generalmente:<br>
+<pre>< style >
+table#idt, th, td {
+	border: 1px solid black;
+	border-collapse: collapse; "que aparezca una línea en lugar de dos separadas"
+		ó border-spacing: 15px; "Separación entre las líneas de encuadre"
+	}
+th, td {
+	padding: 15px; "separación de los bordes"
+	text-align: left; "alineación del texto"
+	}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+	}
+table#t01 tr:nth-child(odd) {
+	background-color:#fff;
+	}
+table#t01 th {
+    background-color: black;
+    color: white;
+    }
+	< /style ></pre></p>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-spacing: 15px;
+	}
+th, td {
+	padding:15px;
+	text-align: center;
+}
+</style>
 
+<h1>Listas</h1>
 
+<p>Viñetas sin orden:</p>
+<p>< ul style="list-style-type:disc">
+  < li>Coffee< /li><br>
+  < li>Tea< /li><br>
+  < li>Milk< /li><br>
+< /ul></p>
+<ul style="list-style-type: none;">
+	<li>disc</li>
+	<li>circle</li>
+	<li>square</li>
+	<li>none</li>
+</ul></p>
+
+<p>Viñetas con orden:</p>
+<p>< ol type="1"><br>
+  < li>Coffee< /li><br>
+  < li>Tea< /li><br>
+  < li>Milk< /li><br>
+< /ol></p>
+<ol type="1">
+	<li>1</li>
+	<li>A</li>
+	<li>a</li>
+	<li>I</li>
+	<li>i</li></ol>
+<p></p>
 </body>
 </html>
