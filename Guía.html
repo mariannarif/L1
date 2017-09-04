@@ -184,6 +184,7 @@ framename - Opens the linked document in a named frame</p>
 		< cite > < /cite >: Citamos <cite>El Resplandor</cite> y queda con formato.</p>
 	<p><ins>Dirección del texto:</ins><br> 
 		Bi-directional override. Indica la dirección del texto:<br> < bdo dir="rtl"> Texto de derecha a izquierda < /bdo ><br><bdo dir="rtl"> Texto de derecha a izquierda </bdo ></p>
+<hr>
 <h1>Tablas</h1>
 <pre>
 	< table style="width:100%" id="idt">
@@ -256,34 +257,69 @@ th, td {
 	text-align: center;
 }
 </style>
-
+<hr>
 <h1>Listas</h1>
 
-<p>Viñetas sin orden:</p>
+<table><tr><td>
+<p>Viñetas sin orden:<br>"unordered list"</p>
 <p>< ul style="list-style-type:disc">
   < li>Coffee< /li><br>
   < li>Tea< /li><br>
   < li>Milk< /li><br>
-< /ul></p>
-<ul style="list-style-type: none;">
+< /ul></p></td>
+<td><ul style="list-style-type: none;">
 	<li>disc</li>
 	<li>circle</li>
 	<li>square</li>
 	<li>none</li>
-</ul></p>
+</ul></p></td></tr>
 
-<p>Viñetas con orden:</p>
+<tr><td>
+<p>Viñetas con orden:<br>"ordered list"</p>
 <p>< ol type="1"><br>
   < li>Coffee< /li><br>
   < li>Tea< /li><br>
   < li>Milk< /li><br>
-< /ol></p>
-<ol type="1">
+< /ol></p></td>
+<td><ol type="1">
 	<li>1</li>
 	<li>A</li>
 	<li>a</li>
 	<li>I</li>
-	<li>i</li></ol>
-<p></p>
+	<li>i</li></ol><p></p></td>
+<tr>
+	<td><p>Lista descriptiva:<br>"descriptive list"</p>
+	<p>< dl ><br>
+	< dt > Elemento < /dt ><br>
+		< dd> Descripción < dd > <br>
+		< /dl></p></td>
+<td><dl>
+	<dt>Elemento</dt>
+		<dd>Descripción del elemento</dd></dt>
+</dl></td>
+</tr></table>
+<p>Puede haber listas dentro de listas. Se abre una nueva lista antes de cerrar la primera:</p>
+<p><ol type="1">
+	<li>Hola</li>
+	<li>Aquí viene la nueva lista</li>
+		<ul>
+			<li>Esta es nueva. Aquí cierra.</li>
+		</ul>
+	<li>Fin.</li>
+</ol><br>
+Con css se pueden hacer listas horizontales.</p>
+<hr>
+<h1>Bloques, inline</h1>
+<p><big><ins>Div:</ins></big> Define bloques, se le puede dar estilo. Ocupa toda la extensión de la página.</p>
+<div style="background-color:black;color: white; padding: 20px">
+	<p> < div style="background-color:black;color: white; padding: 20px" ><br>
+	Contenido del bloque.</p>
+</div>
+<p><ins><big> Span:</big></ins> Separar texto dentro de una línea para darle énfasis.</p>
+<p>El texto va entre los símbolos <span> < span > < /span ></span></p>
+
+
+
+
 </body>
 </html>
