@@ -4,7 +4,7 @@
 <title>Guide to html</title>
      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-color:#ccffcc;">
+<body>
 
 <h1>Básicos</h1>
 
@@ -13,7 +13,7 @@
 <p>Ejemplo de < br >:
 </p>
 <p>Esta es una línea. <br> Esta es otra.</p><p>1. Se define tipo de documento con !DOCTYPE html<br> 
-2. "Backstage" del documento: todo lo que define al doc (el nombre de la pagina web, por ejemplo) que no aparece en la página. Todo lo que está entre los tags de head es la <big><ins>metadata</ins></big> del documento.<br>
+2. "Backstage" del documento: todo lo que define al doc (el nombre de la pagina web, por ejemplo) que no aparece en la página. Todo lo que está entre los tags de head es la <big><ins>metadata</ins></big> (data about data) del documento: < title>, < style>, < meta>, < link> (external style links), < script>, and < base>.<br>
 3. Comienza el body del documento.<br>
 
 
@@ -199,33 +199,8 @@ framename - Opens the linked document in a named frame</p>
 		< /tr >
 	< /table >
 </pre>
-<table style="width: 40%">
-	<caption>Nombre y datos</caption>
-	<tr>
-		<th>Nombre</th>
-		<th>Apellido</th>
-		<th>Edad</th>
-		<th colspan="2">Contacto</th>
-	</tr>
-	<tr>
-		<td>Mariana</td>
-		<td>Rivera</td>
-		<td>22</td>
-		<td>55678392</td>
-		<td>marianarivera@server.com</td>
-	</tr>
-	<tr>
-		<td rowspan="2">Eduardo</td>
-		<td rowspan="2">Frutos</td>
-		<td rowspan="2">22</td>
-		<td rowspan="2">55667832</td>
-		<td>eduardo@server.com</td>
-	</tr>
-	<tr>
-		<td>frutos@server.com</td>
-	</tr>
-</table>
-<p>Los bordes se definen dentro de head, generalmente:<br>
+
+<p><b>Los bordes se definen dentro de head, generalmente:</b><br>
 <pre>< style >
 table#idt, th, td {
 	border: 1px solid black;
@@ -312,13 +287,51 @@ Con css se pueden hacer listas horizontales.</p>
 <h1>Bloques, inline</h1>
 <p><big><ins>Div:</ins></big> Define bloques, se le puede dar estilo. Ocupa toda la extensión de la página.</p>
 <div style="background-color:black;color: white; padding: 20px">
-	<p> < div style="background-color:black;color: white; padding: 20px" ><br>
+	<p> < div class="clase, referencia" style="background-color:black;color: white; padding: 20px" ><br>
 	Contenido del bloque.</p>
 </div>
 <p><ins><big> Span:</big></ins> Separar texto dentro de una línea para darle énfasis.</p>
-<p>El texto va entre los símbolos <span> < span > < /span ></span></p>
+<p>El texto va entre los símbolos <span style="color: red"> < span class="nombre" style:"color:red"> < /span ></span>, con ejemplo de estilo.</p>
+Se hace style> div.clase { propiedades }; span.nombre {props}
 
-
+<hr>
+<h1>Iframes</h1>
+<p>< iframe src="URL" height="200" width="300" style:"border: propiedades">< /iframe></p>
+<hr>
+<h1>Paths</h1>
+<p> < img src=www.kdhfbv.com/carpeta/carpeta/archivo.dem ><br>
+Se puede omitir el root link: srx=/carpeta/archivo</p>
+<hr>
+<h1>Meta</h1>
+<pre style="font-family: tahoma">
+	< meta charset="UTF-8">
+	< meta name="description" content="Free Web tutorials">
+	< meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	< meta name="author" content="John Doe">
+		Refresh every 30 seconds.
+	< meta http-equiv="refresh" content="30">
+		Viewport - cómo aparece el documento en diferentes dispositivos
+	< meta name="viewport" content="width=device-width, initial-scale=1.0">
+		Base: base url and base target for links
+	< base href="https://www.w3schools.com/images/" target="_blank">
+</pre>
+<hr>
+<h1>Layout</h1>
+<p>Se le da style en head.</p>
+<p style="text-align: center;"><img src="layout.png" height="70%" width="70%"></p>
+<hr>
+<h1>Computercode</h1>
+<pre> 
+				< code> bla < /code>
+	User input	
+				< kbd > Ctrl + s < /kbd >
+	Program output
+				< samp> Error! < /samp >
+	Variables
+				< var > X < /var ></pre>
+<hr>
+<h1>Entities</h1>
+<p style="text-align: center;"><img src="entity.png" height="60%" width="60%"></p>
 
 
 </body>
