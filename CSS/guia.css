@@ -1,0 +1,54 @@
+body{
+	margin-left: 15px;
+	margin-right:15px;
+	background-color: slategray;
+}
+div{
+	padding: 12px;
+}
+.aa {
+	background-color: aliceblue
+}
+.ab {
+	background-color: lavender
+}
+.ac{
+	background-color: lightsteelblue
+}
+h1 {
+	text-align: center; 
+	background-color: black;
+	color: white;
+}
+h3{
+	text-transform: uppercase;
+	color:darkblue;
+	font-family: courier, sans-serif;
+}
+.link {
+	text-align: center;
+	font-family: arial;
+}
+
+a:link {
+    color: black; 
+    background-color: transparent; 
+    text-decoration: none;
+	}
+a:visited {
+    color: cadetblue;
+    background-color: transparent;
+    text-decoration: none;
+	}
+a:hover {
+    color: green;
+    background-color: transparent;
+    text-decoration: underline;
+	}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+	}
+
+
