@@ -40,6 +40,12 @@ img{
 		border:10px double slategray;
 		padding: 20px;
 	}
+.ae{background-color: #bdf5db; 
+	padding-bottom: 10px
+}
+.af{
+	background-color: #eed2d8;
+}
 
 .imp {position: sticky; 
 	top: 0px; 
@@ -67,6 +73,10 @@ h3{
 	margin: 0 0 0 45px;
 
 }
+.lay{
+	border-top: 2px solid black
+}
+
 td{
 	text-align: center;
 }
@@ -87,6 +97,14 @@ td{
 	padding: 1px;
 	margin-left: 20px;
 	margin-right: 20px;
+}
+
+.fre{
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	background-color: #F0FFFF;
+	border-radius: 0px;
 }
 a:link {
     color: black; 

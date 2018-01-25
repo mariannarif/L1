@@ -34,19 +34,19 @@
 
 <div class="ac"><h1>Borders, Margins, Padding</h1><h3>Bordes</h3>
  	<p style="text-align: center; text-indent: 15px"> border: width style color<br>
-<img src="../IM/border.png" width="500" height="250" border="5px" ><br><img src="../IM/border2.png" width="650" height="325">
- 	</p>
- 	<h3>Margins</h3>
- 	<p>Deja espacio fuera del borde.<br>
- 	margin-bottom/left/right/top: px<br>
- 	margin: auto (center)/inherit (from parent element)/top right bottom leftpx<br>
- 	Dos márgenes juntos (de arriba o abajo) se harán uno, tomando la medida del mayor.
- 	</p>
- 	<h3>Padding</h3>
- 	<p>Deja espacio dentro del borde. Mismas características que margins.</p>
- 	<h3>Height, width</h3>
- 	<p>Aplican únicamente al contenido, no a márgenes, bordes... El ancho y altura final son suma de todo.<br> 
- 	max/min-height/width: deja el tamaño del elemento dinámico; si se reduce el tamaño de la página, el elemento se ajusta. Si se define en %, una se ajusta a la otra.</p></div>
+	<img src="../IM/border.png" width="500" height="250" border="5px" ><br><img src="../IM/border2.png" width="650" height="325">
+	 	</p>
+	 	<h3>Margins</h3>
+	 	<p>Deja espacio fuera del borde.<br>
+	 	margin-bottom/left/right/top: px<br>
+	 	margin: auto (center)/inherit (from parent element)/top right bottom leftpx<br>
+	 	Dos márgenes juntos (de arriba o abajo) se harán uno, tomando la medida del mayor.
+	 	</p>
+	 	<h3>Padding</h3>
+	 	<p>Deja espacio dentro del borde. Mismas características que margins.</p>
+	 	<h3>Height, width</h3>
+	 	<p>Aplican únicamente al contenido, no a márgenes, bordes... El ancho y altura final son suma de todo.<br> 
+	 	max/min-height/width: deja el tamaño del elemento dinámico; si se reduce el tamaño de la página, el elemento se ajusta. Si se define en %, una se ajusta a la otra.</p></div>
  <div class="ad"><h1>Box Model, Outline</h1>
  	<div class="ba"><p style="text-align: center;">Incluye los elementos margin, border, y padding.</p>
  	<h3>Outline</h3>
@@ -59,7 +59,7 @@
 		-style; -size: px; -weight: normal/bold; -variant: small-caps.<br>
 		</p></div>
 
-<div style="background-color: #bdf5db; padding-bottom: 10px"><h1>Listas, tablas</h1>
+<div class="ae"><h1>Listas, tablas</h1>
 	<h3>Listas</h3>
 	<ul class="lis" style="list-style-type: circle;"><p>Markers: list-style-</p>
 	<li class="lala">-type</li>
@@ -76,11 +76,11 @@
 			<li>border</li>
 			<li>border-bottom: para dividir horizontalmente</li>
 			<li>tr:hover: {propiedades para cuando se coloque el cursor sobre el renglon}</li>
-			<li>tr:nth-child(even/odd) {propiedades para una tabla sombreada por renglones}</li>
+			<li>tr:nth-child(even/odd) œ{propiedades para una tabla sombreada por renglones}</li>
 		</ul>
 	</div>
-<div style="background-color: #eed2d8"><h1>Layout</h1>	
-	<h3>Display</h3>
+<div class="af"><h1>Layout</h1>	
+	<h3 class="lay">Display</h3>
 	<p style="text-indent: 10px">display: property</p>
 	<p>Cómo mostrar un elemento.<br>
 		Block-level: se extiende en toda la página: < div/h/p/form/header/footer/section ><br>
@@ -93,17 +93,28 @@
 		<li><ul><li>visibility:hidden - también oculta el elemento pero sigue ocupando el espacio asignado</li></ul></li>
 		<li>inline - cambias la propiedad default. Ejemplo: cambias la lista de ser block a ser inline y haces lista horizontal.</li>
 		<li>block - hará que halla line breaks entre elementos</li></ul>
-		<h3>Position</h3>
+		
+		<h3 class="lay">Position</h3>
 		<p style="text-indent: 10px">position: static/relative/fixed/absolute/sticky;</p>
 		
 		<table style="margin: auto; margin:0px 8px 2px 10px; border-spacing: 18px; border-left: 2px solid #ff1dae; border-right: 2px solid #ff1dae"><tr><th>Static</th><th>Relative</th><th>Fixed</th><th>Absolute</th><th>Sticky</th></tr>
-		<tr><td>Default, va de acuerdo al "flow" normal de la página</td>
-		<td>Relativo a su posición normal - position: relative; left/right/top/bottom: px</td><td>Asignas su posición bottom, left, right, upper y permanece ahí al mover la página.</td>
-		<td>En relación con su antecesor. Div dentro de div</td>
+		<tr><td>Default, va de acuerdo al "flow" normal de la página. Ignora modificaciones de posición.</td>
+		<td>Relativo a su posición normal en el viewport. - position: relative; left/right/top/bottom: px</td><td>Asignas su posición bottom, left, right, upper y permanece ahí al mover la página.</td>
+		<td>En relación con su antecesor. Div dentro de div.</td>
 		<td>Comienza en posición normal; cuando te mueves en la página permanece visible en una posición.</td></tr></table>
 		<p> <ins>Z-index:</ins> For overlaping elements. Le asignas un valor: los menores valores aparecen atrás, los mayores hasta adelante.</p>
 
-		<h3>Overflow</h3>
+	<h3 class="lay">Overflow</h3>
+		<p>Para contenido que no cabe en un área</p><p>overflow-x/y:</p>
+		<ul><li>Visible: default - se sale el contenido</li>
+		<li>hidden: oculta el contenido que no quepa en el div</li>
+		<li>scroll: agrega barra desplazadora</li>
+		<li>auto: agrega barra cuando sea necesario</li></ul>
+
+	<h3 class="lay">Float</h3>
+		<p>Acomodar un elemento en su div. El resto de los elementos se ajustan a su posición.<p>float: right/left/none/inherit</p></p>
+		<div class="fre"><p><b>Floating right</b></p></div>
+		<p>Hola James</p>
 
 </div>
 
